@@ -19,15 +19,15 @@ class user extends Controller
         //return view('main',compact('obj'));
         //return view('main',compact('this'));
 
-        $data = Ticket::select('trackid','openedby')->get();
+        $data = Ticket::select('id','trackid','openedby')->get();
 
         //return Ticket::get();
         //$data = Ticket::get();
 
-        //return view('main',compact('data'));
+        return view('main',compact('data'));
 
 
-
+        /*
         $rules = [
             'trackid' => 'required|max:100',
             'openedby' => 'required|numeric',
@@ -56,6 +56,7 @@ class user extends Controller
         ]);
 
         return redirect()->back()->with(['success' => 'your request has een done']);
+        */
 
     }
 
